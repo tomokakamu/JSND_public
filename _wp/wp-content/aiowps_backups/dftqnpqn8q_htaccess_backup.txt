@@ -1,0 +1,80 @@
+
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# リニューアル対応: 静的htmlをリダイレクト
+RewriteRule ^rijityo2023\.html$ /about/rijityo2023/ [R=301,L]
+RewriteRule ^profile\.html$ /about/ [R=301,L]
+RewriteRule ^yakuin\.html$ /about/yakuin/ [R=301,L]
+RewriteRule ^kaiin\.html$ /about/kaiin/ [R=301,L]
+RewriteRule ^iinkai\.html$ /about/iinkai/ [R=301,L]
+RewriteRule ^gijiroku\.html$ /about/gijiroku/ [R=301,L]
+RewriteRule ^taishakutaisho\.html$ /about/taishaku/ [R=301,L]
+RewriteRule ^journal\.html$ /journal/ [R=301,L]
+RewriteRule ^shoseki\.html$ /journal/shoseki/ [R=301,L]
+RewriteRule ^soukai\.html$ /soukai/ [R=301,L]
+RewriteRule ^simin\.html$ /soukai/simin/ [R=301,L]
+RewriteRule ^kenkyujissen\.html$ /kenkyujissen/ [R=301,L]
+RewriteRule ^hyoshojigyo\.html$ /kenkyujissen/hyoshojigyo/ [R=301,L]
+RewriteRule ^rinri\.html$ /kenkyujissen/rinri/ [R=301,L]
+RewriteRule ^riekisouhan\.html$ /kenkyujissen/riekisouhan/ [R=301,L]
+RewriteRule ^nyukai\.html$ /nyukai2/ [R=301,L]
+RewriteRule ^sien\.html$ /sien/ [R=301,L]
+RewriteRule ^nyukaiannnai\.html$ /nyukai2/ [R=301,L]
+RewriteRule ^member\.html$ /mypage2/ [R=301,L]
+RewriteRule ^shibu\.html$ /shibu/ [R=301,L]
+RewriteRule ^hokkaido\.html$ /shibu/hokkaido/ [R=301,L]
+RewriteRule ^touhoku\.html$ /shibu/touhoku/ [R=301,L]
+RewriteRule ^kanto_koushin\.html$ /shibu/kanto_koushin/ [R=301,L]
+RewriteRule ^hokuriku\.html$ /shibu/hokuriku/ [R=301,L]
+RewriteRule ^toukai\.html$ /shibu/toukai/ [R=301,L]
+RewriteRule ^kinki\.html$ /shibu/kinki/ [R=301,L]
+RewriteRule ^tyugoku\.html$ /shibu/tyugoku/ [R=301,L]
+RewriteRule ^shikoku\.html$ /shibu/shikoku/ [R=301,L]
+RewriteRule ^kyushu_okinawa\.html$ /shibu/kyushu_okinawa/ [R=301,L]
+RewriteRule ^modelcore\.html$ /modelcore/ [R=301,L]
+RewriteRule ^seibunhyo\.html$ /seibunhyo/ [R=301,L]
+RewriteRule ^other\.html$ /news/other/ [R=301,L]
+RewriteRule ^link\.html$ /link/ [R=301,L]
+RewriteRule ^privacy\.html$ /privacy/ [R=301,L]
+RewriteRule ^sitemap\.html$ /sitemap/ [R=301,L]
+
+# これは要確認　RewriteRule ^pastnews\.html$ /news/pastnews/ [R=301,L]
+
+# EN
+RewriteRule ^english/$ /en/ [R=301,L]
+RewriteRule ^english/index.html$ /en/ [R=301,L]
+RewriteRule ^english/aboutjsnd.html$ /en/aboutjsnd/ [R=301,L]
+RewriteRule ^english/frompresident.html$ /en/aboutjsnd/frompresident/ [R=301,L]
+RewriteRule ^english/generaloutline.html$ /en/aboutjsnd/generaloutline/ [R=301,L]
+RewriteRule ^english/activities.html$ /en/aboutjsnd/activities/ [R=301,L]
+RewriteRule ^english/milestones.html$ /en/aboutjsnd/milestones/ [R=301,L]
+RewriteRule ^english/organization.html$ /en/aboutjsnd/organization/ [R=301,L]
+RewriteRule ^english/boardoftrustees.html$ /en/aboutjsnd/boardoftrustees/ [R=301,L]
+RewriteRule ^english/events.html$ /en/events/ [R=301,L]
+RewriteRule ^english/annual.html$ /en/events/annual/ [R=301,L]
+RewriteRule ^english/jsndjournal.html$ /en/jsndjournal/ [R=301,L]
+RewriteRule ^english/membership.html$ /en/membership/ [R=301,L]
+RewriteRule ^english/intarnational.html$ /en/international/ [R=301,L]
+RewriteRule ^english/collabosneb.html$ /en/international/collabosneb/ [R=301,L]
+RewriteRule ^english/collabokscn.html$ /en/international/collabokscn/ [R=301,L]
+RewriteRule ^english/njppp.html$ /en/international/collabokscn/ [R=301,L]
+RewriteRule ^english/headoffice.html$ /en/headoffice/ [R=301,L]
+</IfModule>
+
+# BEGIN WordPress
+# "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
+# 動的に生成され、WordPress フィルターによってのみ修正が可能です。
+# これらのマーカー間にあるディレクティブへのいかなる変更も上書きされてしまいます。
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+

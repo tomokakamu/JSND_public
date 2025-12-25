@@ -1,48 +1,20 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+# --- 不要な巨大フォルダを除外 ---
+_wp/wp-content/ai1wm-backups/
+_wp/wp-content/uploads/
+_wp/wp-content/upgrade/
+_wp/wp-content/cache/
 
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+# --- テスト環境や旧データを完全に除外 ---
+test.jsnd.jp/
+old/
 
-# Configuration
+# --- サーバー固有の設定ファイル（環境差分）を除外 ---
+.htaccess
+php.ini
+aios-bootstrap.php
 wp-config.php
 
-# Example themes
-/wp-content/themes/twenty*/
-
-# Example plugin
-/wp-content/plugins/hello.php
-
-# Uploads
-/wp-content/uploads/
-
-# Log files
+# --- その他、不要なシステムファイル ---
+.DS_Store
+Thumbs.db
 *.log
-
-# htaccess
-/.htaccess
-
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
-
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
