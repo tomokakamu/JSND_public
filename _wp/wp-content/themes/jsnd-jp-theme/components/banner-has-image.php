@@ -72,7 +72,7 @@ if ( file_exists( $pdf_path ) ) {
 		</a>
 			*/
 		?>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>nyukai2/">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>nyukai/nyukaiannnai/">
 			<div class="c-sidebar-banner-has-image__image">
 				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/assets/banner-nyukai_sidebar.jpg" alt="">
 			</div>
